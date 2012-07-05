@@ -19,5 +19,13 @@ iface eth0 inet6 static
 EOA
 
 wget -O /etc/network/ipv6.sh https://raw.github.com/chrisgward/Linux-Scripts/master/ipv6.sh
+chmod +x /etc/network/ipv6.sh
+echo "ClientAliveInterval 60" >> /etc/ssh/sshd_config
+
+adduser mc --home=/srv/mc --disabled-login --disabled-password --system --group
+adduser ircd --home=/srv/irc/ircd --disabled-login --disabled-password --system --group
+adduser sbnc --home=/srv/irc/sbnc --disabled-login --disabled-password --system --group
+adduser atheme --home=/srv/irc/atheme --disabled-login --disabled-password --system --group
+adduser murmur --home=/srv/murmur --disabled-login --disabled-password --system --group
 
 reboot
