@@ -18,6 +18,6 @@ iface eth0 inet6 static
         pre-down /etc/network/ipv6.sh del
 EOA
 
-wget -O /etc/network/ipv6 https://raw.github.com/chrisgward/Linux-Scripts/master/ipv6.sh
+wget -O /etc/network/ipv6.sh https://raw.github.com/chrisgward/Linux-Scripts/master/ipv6.sh
 
 reboot
